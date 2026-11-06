@@ -1,4 +1,4 @@
 # 🐍 Programación
 
 ## Índice
-- [Python básico](01-python-basico.md) *(próximamente)*
+- [Python básico](01-python-basico.md) 
