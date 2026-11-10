@@ -1,11 +1,9 @@
 # Mis Apuntes de Informática
 
-¡Bienvenido a mi cuaderno digital de notas!
+¡Bienvenido a mi biblioteca digital de teoría y aprendizaje!
 
-## Asignaturas
+## Contenido
 
-* **Programación**
-* **Sistemas Operativos**
-* **Bases de Datos**
+* **Python**
 
 > Esta web se genera automáticamente desde mi repositorio de GitHub.
