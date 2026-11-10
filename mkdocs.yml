@@ -3,11 +3,6 @@ theme:
   name: material
   language: es
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Cambiar a modo automático
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
