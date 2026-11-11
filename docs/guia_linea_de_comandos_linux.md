@@ -300,7 +300,7 @@ Al ejecutar `ls -l`, el primer bloque de 10 caracteres muestra la naturaleza y l
 
 ```
 - r w x r - x r - -
-│ │───┘ │───┘ │───┘
+│ │___| │___| │___|
 │   │     │     └── Permisos para OTROS (Others / World)
 │   │     └──────── Permisos para el GRUPO (Group)
 │   └────────────── Permisos para el PROPIETARIO (User)
@@ -324,24 +324,31 @@ Existen dos métodos para modificar permisos con el comando `chmod`:
 
 Se calcula sumando los valores numéricos correspondientes ($r=4, w=2, x=1$) para cada uno de los tres grupos (User, Group, Others).
 
-$$
-\text{Permiso Octal} = (r+w+x)_{\text{User}} \quad (r+w+x)_{\text{Group}} \quad (r+w+x)_{\text{Others}}
-$$
+Los números de permisos que nos podemos encontrar serán los siguientes:
+
+0 = — (Sin permisos)    
+1 = –x (Solo permisos de ejecución)
+2 = -w- (Solo permisos de escritura)
+3 = -wx (Permisos de escritura y ejecución)
+4 = r– (Solo permisos de lectura)
+5 = r-x (Permisos de lectura y ejecución)
+6 = rw- (Permisos de lectura y escritura)
+7 = rwx (Todos los permisos)
 
 * **Ejemplo 1: `chmod 755 script.sh`**
-  * Usuario (Propietario): $4 + 2 + 1 = 7$ (`rwx` - Control total)
-  * Grupo: $4 + 0 + 1 = 5$ (`r-x` - Lectura y ejecución)
-  * Otros: $4 + 0 + 1 = 5$ (`r-x` - Lectura y ejecución)
+    Usuario (Propietario): $4 + 2 + 1 = 7$ (`rwx` - Control total)
+    Grupo: $4 + 0 + 1 = 5$ (`r-x` - Lectura y ejecución)
+    Otros: $4 + 0 + 1 = 5$ (`r-x` - Lectura y ejecución)
 
 * **Ejemplo 2: `chmod 644 documento.txt`**
-  * Usuario: $4 + 2 + 0 = 6$ (`rw-` - Lectura y escritura)
-  * Grupo: $4 + 0 + 0 = 4$ (`r--` - Solo lectura)
-  * Otros: $4 + 0 + 0 = 4$ (`r--` - Solo lectura)
+    Usuario: $4 + 2 + 0 = 6$ (`rw-` - Lectura y escritura)
+    Grupo: $4 + 0 + 0 = 4$ (`r--` - Solo lectura)
+    Otros: $4 + 0 + 0 = 4$ (`r--` - Solo lectura)
 
 * **Ejemplo 3: `chmod 700 clave_privada.pem`**
-  * Usuario: $7$ (`rwx`)
-  * Grupo: $0$ (`---`)
-  * Otros: $0$ (`---`)
+    Usuario: $7$ (`rwx`)
+    Grupo: $0$ (`---`)
+    Otros: $0$ (`---`)
 
 #### Método 2: Notación Simbólica
 
@@ -403,9 +410,9 @@ Todo proceso en Linux abierto en la terminal funciona con tres flujos o descript
 
 ```
                       ┌──────────────────────┐
-    [0] stdin  ──────>│                      ├──────> [1] stdout (Pantalla)
-  (Teclado/Input)     │   Proceso / Comando   │
-                      │                      ├──────> [2] stderr (Pantalla)
+    [0] stdin  ─────> │                      | ─────> [1] stdout (Pantalla)
+  (Teclado/Input)     │   Proceso / Comando  │
+                      │                      | ─────> [2] stderr (Pantalla)
                       └──────────────────────┘
 ```
 
