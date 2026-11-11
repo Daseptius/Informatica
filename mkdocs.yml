@@ -23,3 +23,12 @@ theme:
     - navigation.sections
     - navigation.expand
     - content.code.copy
+
+nav:
+  - Home: index.md
+  - Máquinas Virtuales:
+      - Guía de conexión SSH: guia-ssh.md
+  - Linux:
+      - Fundamentos de la Línea de Comandos: guia_linea_de_comandos_linux.md
+  - Python:
+      - Guía Completa de Python: python.md
