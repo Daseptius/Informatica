@@ -1,0 +1,2580 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../guia_linea_de_comandos_linux/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Guía Completa de Python - Informatica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-completa-de-python-de-cero-a-intermedio" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Informatica" class="md-header__button md-logo" aria-label="Informatica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Informatica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guía Completa de Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Informatica" class="md-nav__button md-logo" aria-label="Informatica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Informatica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Máquinas Virtuales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Máquinas Virtuales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de conexión SSH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_linea_de_comandos_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamentos de la Línea de Comandos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Completa de Python
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Completa de Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-1-tipos-de-datos-primitivos-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 MÓDULO 1 — Tipos de datos primitivos simples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 MÓDULO 1 — Tipos de datos primitivos simples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-numeros-int-y-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Números (int y float)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-cadenas-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Cadenas (str)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-booleanos-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Booleanos (bool)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-2-operadores-y-conversion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 MÓDULO 2 — Operadores y conversión de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 MÓDULO 2 — Operadores y conversión de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Operadores aritméticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-operadores-logicos-con-numeros-comparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Operadores lógicos con números (comparación)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-conversion-de-datos-primitivos-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Conversión de datos primitivos (casting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-operadores-logicos-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Operadores lógicos booleanos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-3-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 MÓDULO 3 — Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-4-entrada-y-salida-por-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 MÓDULO 4 — Entrada y salida por terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟡 MÓDULO 4 — Entrada y salida por terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entrada-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Entrada: input()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-salida-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Salida: print()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-salida-formateada-con-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Salida formateada con f-strings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-alternativa-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Alternativa: format()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-5-cadenas-en-profundidad-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 MÓDULO 5 — Cadenas en profundidad (str)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟡 MÓDULO 5 — Cadenas en profundidad (str)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-acceso-a-elementos-por-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Acceso a elementos por índice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-subcadenas-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Subcadenas (slicing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-operaciones-con-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Operaciones con cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-comparacion-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Comparación de cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-funciones-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Funciones de cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-6-condicionales-y-bucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 MÓDULO 6 — Condicionales y bucles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟡 MÓDULO 6 — Condicionales y bucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-condicional-if-elif-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Condicional if / elif / else
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bucle-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Bucle while
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-bucle-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Bucle for
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-7-listas-tuplas-y-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟠 MÓDULO 7 — Listas, tuplas y diccionarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 MÓDULO 7 — Listas, tuplas y diccionarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-listas-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Listas (list)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-tuplas-tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Tuplas (tuple)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-diccionarios-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Diccionarios (dict)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-8-comprension-de-colecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 MÓDULO 8 — Comprensión de colecciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 MÓDULO 8 — Comprensión de colecciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-comprension-de-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Comprensión de listas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-comprension-de-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Comprensión de diccionarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-del-orden-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Resumen del orden de aprendizaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Resumen del orden de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consejos-clave-para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Consejos clave para recordar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-1-tipos-de-datos-primitivos-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 MÓDULO 1 — Tipos de datos primitivos simples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 MÓDULO 1 — Tipos de datos primitivos simples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-numeros-int-y-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Números (int y float)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-cadenas-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Cadenas (str)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-booleanos-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Booleanos (bool)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-2-operadores-y-conversion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 MÓDULO 2 — Operadores y conversión de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 MÓDULO 2 — Operadores y conversión de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Operadores aritméticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-operadores-logicos-con-numeros-comparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Operadores lógicos con números (comparación)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-conversion-de-datos-primitivos-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Conversión de datos primitivos (casting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-operadores-logicos-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Operadores lógicos booleanos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-3-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 MÓDULO 3 — Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-4-entrada-y-salida-por-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 MÓDULO 4 — Entrada y salida por terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟡 MÓDULO 4 — Entrada y salida por terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-entrada-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Entrada: input()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-salida-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Salida: print()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-salida-formateada-con-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Salida formateada con f-strings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-alternativa-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Alternativa: format()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-5-cadenas-en-profundidad-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 MÓDULO 5 — Cadenas en profundidad (str)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟡 MÓDULO 5 — Cadenas en profundidad (str)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-acceso-a-elementos-por-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Acceso a elementos por índice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-subcadenas-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Subcadenas (slicing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-operaciones-con-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Operaciones con cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-comparacion-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Comparación de cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-funciones-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Funciones de cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-6-condicionales-y-bucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 MÓDULO 6 — Condicionales y bucles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟡 MÓDULO 6 — Condicionales y bucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-condicional-if-elif-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Condicional if / elif / else
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bucle-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Bucle while
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-bucle-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Bucle for
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-7-listas-tuplas-y-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟠 MÓDULO 7 — Listas, tuplas y diccionarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 MÓDULO 7 — Listas, tuplas y diccionarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-listas-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Listas (list)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-tuplas-tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Tuplas (tuple)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-diccionarios-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Diccionarios (dict)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-8-comprension-de-colecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 MÓDULO 8 — Comprensión de colecciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔴 MÓDULO 8 — Comprensión de colecciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-comprension-de-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Comprensión de listas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-comprension-de-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Comprensión de diccionarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-del-orden-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Resumen del orden de aprendizaje
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Resumen del orden de aprendizaje">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consejos-clave-para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Consejos clave para recordar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-completa-de-python-de-cero-a-intermedio">🐍 Guía Completa de Python — De Cero a Intermedio</h1>
+<p>Guía estructurada en 8 módulos, de menor a mayor dificultad. Cada concepto incluye descripción, sintaxis y ejemplos.</p>
+<hr />
+<h2 id="modulo-1-tipos-de-datos-primitivos-simples">🟢 MÓDULO 1 — Tipos de datos primitivos simples</h2>
+<h3 id="11-numeros-int-y-float">1.1 Números (<code>int</code> y <code>float</code>)</h3>
+<p><strong>Descripción:</strong> Secuencia de dígitos que representan números. Pueden ser enteros (<code>int</code>) o reales (<code>float</code>, con decimales). Se permite el <code>-</code> para negativos y el <code>.</code> para decimales.</p>
+<p><strong>Sintaxis / Ejemplos:</strong></p>
+<pre><code class="language-python">0, -1, 3.1415
+
+type(1)      # &lt;class 'int'&gt;
+type(-2)     # &lt;class 'int'&gt;
+type(2.3)    # &lt;class 'float'&gt;
+</code></pre>
+<h3 id="12-cadenas-str">1.2 Cadenas (<code>str</code>)</h3>
+<p><strong>Descripción:</strong> Secuencia de caracteres alfanuméricos que representan texto. Se escriben entre comillas simples o dobles.</p>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-python">'Hola'
+&quot;Adiós&quot;
+'Python'
+&quot;123&quot;
+'True'
+''        # cadena vacía
+' '       # cadena con un espacio en blanco
+'\n'      # salto de línea
+'\t'      # tabulador
+</code></pre>
+<h3 id="13-booleanos-bool">1.3 Booleanos (<code>bool</code>)</h3>
+<p><strong>Descripción:</strong> Solo contiene dos valores: <code>True</code> y <code>False</code>, que representan verdadero y falso. Son inmutables.</p>
+<pre><code class="language-python">True
+False
+</code></pre>
+<blockquote>
+<p>💡 <strong>Concepto clave: inmutabilidad.</strong> Los datos primitivos simples (números, cadenas, booleanos) son <strong>inmutables</strong>: su valor no puede cambiar durante la ejecución.</p>
+</blockquote>
+<hr />
+<h2 id="modulo-2-operadores-y-conversion-de-datos">🟢 MÓDULO 2 — Operadores y conversión de datos</h2>
+<h3 id="21-operadores-aritmeticos">2.1 Operadores aritméticos</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>suma</td>
+<td><code>2 + 3</code></td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>resta</td>
+<td><code>5 - 2</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>producto</td>
+<td><code>5 * -2</code></td>
+<td><code>-10</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>cociente (real)</td>
+<td><code>5 / 2</code></td>
+<td><code>2.5</code></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td>cociente entero</td>
+<td><code>5 // 2</code></td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>resto</td>
+<td><code>5 % 2</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>potencia</td>
+<td><code>2 ** 3</code></td>
+<td><code>8</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Orden de prioridad de evaluación:</strong></p>
+<ol>
+<li>Funciones predefinidas</li>
+<li>Potencias</li>
+<li>Productos y cocientes</li>
+<li>Sumas y restas</li>
+</ol>
+<p>Se puede saltar el orden usando <strong>paréntesis</strong>:</p>
+<pre><code class="language-python">(2 + 3) ** 2   # 25
+</code></pre>
+<h3 id="22-operadores-logicos-con-numeros-comparacion">2.2 Operadores lógicos con números (comparación)</h3>
+<p>Devuelven un valor booleano:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>igual que</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>mayor que</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>menor que</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>mayor o igual que</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>menor o igual que</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>distinto de</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">3 == 3        # True
+3.1 &lt;= 3      # False
+-1 != 1       # True
+</code></pre>
+<h3 id="23-conversion-de-datos-primitivos-casting">2.3 Conversión de datos primitivos (casting)</h3>
+<p><strong>Descripción:</strong> Convierten un dato de un tipo a otro, siempre que sea posible.</p>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Convierte a</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int()</code></td>
+<td>entero</td>
+<td><code>int('12')</code></td>
+<td><code>12</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>int(True)</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>int('c')</code></td>
+<td>❌ Error</td>
+</tr>
+<tr>
+<td><code>float()</code></td>
+<td>real</td>
+<td><code>float('3.14')</code></td>
+<td><code>3.14</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>float(True)</code></td>
+<td><code>1.0</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>float('III')</code></td>
+<td>❌ Error</td>
+</tr>
+<tr>
+<td><code>str()</code></td>
+<td>cadena</td>
+<td><code>str(3.14)</code></td>
+<td><code>'3.14'</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>str(True)</code></td>
+<td><code>'True'</code></td>
+</tr>
+<tr>
+<td><code>bool()</code></td>
+<td>lógico</td>
+<td><code>bool('0')</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>bool('3.14')</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>bool('')</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>bool('Hola')</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Ojo:</strong> <code>bool('0')</code> es <code>True</code> porque la cadena <code>'0'</code> no está vacía. Solo <code>bool('')</code> (cadena vacía) es <code>False</code>.</p>
+</blockquote>
+<h3 id="24-operadores-logicos-booleanos">2.4 Operadores lógicos booleanos</h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>not b</code></td>
+<td>Devuelve <code>True</code> si <code>b</code> es <code>False</code>, y viceversa</td>
+</tr>
+<tr>
+<td><code>b1 and b2</code></td>
+<td><code>True</code> solo si ambos son <code>True</code></td>
+</tr>
+<tr>
+<td><code>b1 or b2</code></td>
+<td><code>True</code> si al menos uno es <code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabla de verdad:</strong></p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>y</th>
+<th>not x</th>
+<th>x and y</th>
+<th>x or y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr>
+<td>True</td>
+<td>True</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">not True          # False
+False or True     # True
+True and False    # False
+True and True     # True
+</code></pre>
+<hr />
+<h2 id="modulo-3-variables">🟢 MÓDULO 3 — Variables</h2>
+<p><strong>Descripción:</strong> Una variable es un identificador ligado a un valor. Python tiene <strong>tipado dinámico</strong>: no se declara el tipo ni es necesario declararlas antes de usarlas.</p>
+<p><strong>Reglas para nombrarlas:</strong></p>
+<ul>
+<li>Comienzan siempre por una letra, seguida de otras letras o números.</li>
+<li>No se pueden usar palabras reservadas del lenguaje.</li>
+</ul>
+<p><strong>Sintaxis y ejemplos:</strong></p>
+<pre><code class="language-python"># Asignación simple
+lenguaje = 'Python'
+x = 3.14
+y = 3 + 2
+
+# Asignación múltiple
+a1, a2 = 1, 2
+
+# Intercambio de valores
+a, b = b, a
+
+# Incremento (equivale a x = x + 2)
+x += 2
+
+# Decremento (equivale a x = x - 1)
+x -= 1
+
+# Valor no definido
+x = None
+
+# Borrar una variable
+del x
+</code></pre>
+<hr />
+<h2 id="modulo-4-entrada-y-salida-por-terminal">🟡 MÓDULO 4 — Entrada y salida por terminal</h2>
+<h3 id="41-entrada-input">4.1 Entrada: <code>input()</code></h3>
+<p><strong>Descripción:</strong> Muestra un mensaje por la terminal y devuelve una cadena con la entrada del usuario.</p>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">input(mensaje)
+</code></pre>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-python">language = input('¿Cuál es tu lenguaje favorito? ')
+# Usuario escribe: Python
+# language -&gt; 'Python'   (siempre es str)
+
+age = input('¿Cuál es tu edad? ')
+# Usuario escribe: 20
+# age -&gt; '20'   (¡es cadena, no número!)
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Advertencia clave:</strong> El valor devuelto por <code>input()</code> <strong>siempre es una cadena</strong>, incluso si el usuario introduce un número. Si necesitas un número, conviértelo: <code>int(input(...))</code>.</p>
+</blockquote>
+<h3 id="42-salida-print">4.2 Salida: <code>print()</code></h3>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">print(dato1, ..., sep=' ', end='\n', file=sys.stdout)
+</code></pre>
+<ul>
+<li><code>dato1, ...</code>: datos a imprimir (tantos como quieras, separados por comas).</li>
+<li><code>sep</code>: separador entre datos (por defecto un espacio <code>' '</code>).</li>
+<li><code>end</code>: cadena final de la impresión (por defecto <code>\n</code>, salto de línea).</li>
+<li><code>file</code>: flujo de salida (por defecto la salida estándar).</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-python">print('Hola')                       # Hola
+name = 'Alf'
+print('Hola', name)                 # Hola Alf
+print('El valor de pi es', 3.1415)  # El valor de pi es 3.1415
+print('Hola', name, sep='')         # HolaAlf
+print('Hola', name, end='\n')       # Hola Alf
+</code></pre>
+<h3 id="43-salida-formateada-con-f-strings">4.3 Salida formateada con f-strings</h3>
+<p><strong>Descripción:</strong> Construyen cadenas combinando texto con variables o expresiones. Se antepone <code>f</code> a la cadena y se incluyen las variables entre <code>{}</code>.</p>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">f'texto {variable} más texto {expresión}'
+</code></pre>
+<p><strong>Ejemplos básicos:</strong></p>
+<pre><code class="language-python">name = 'Alf'
+age = 20
+print(f'Me llamo {name} y tengo {age} años')
+# Me llamo Alf y tengo 20 años
+
+print(f'El año que viene tendré {age + 1} años')
+# El año que viene tendré 21 años
+</code></pre>
+<p><strong>Formatos dentro de las llaves</strong> (tras <code>:</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{valor:n}</code></td>
+<td>Alinea a la izquierda, rellena con espacios a la derecha hasta n caracteres</td>
+</tr>
+<tr>
+<td><code>{valor:&gt;n}</code></td>
+<td>Alinea a la derecha, rellena con espacios a la izquierda hasta n caracteres</td>
+</tr>
+<tr>
+<td><code>{valor:^n}</code></td>
+<td>Centra, rellena con espacios por ambos lados hasta n caracteres</td>
+</tr>
+<tr>
+<td><code>{valor:nd}</code></td>
+<td>Formatea como entero con n caracteres (rellena con espacios a la izquierda)</td>
+</tr>
+<tr>
+<td><code>{valor:n.mf}</code></td>
+<td>Formatea como real con n caracteres totales y m decimales</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">pi = 3.141592
+print(f'Pi vale {pi:8.2f}')   # Pi vale 3.14
+
+dia = 'Lunes'
+temperatura = 21.4
+print(f'{dia:&lt;10}{temperatura:&gt;6.1f} °C')   # Lunes       21.4 °C
+</code></pre>
+<blockquote>
+<p>⚠️ Las f-strings solo están disponibles a partir de <strong>Python 3.6</strong>.</p>
+</blockquote>
+<h3 id="44-alternativa-format">4.4 Alternativa: <code>format()</code></h3>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">c.format(valores)
+</code></pre>
+<p>Sustituye los marcadores <code>{}</code> de la cadena <code>c</code> por los valores, por posición o por nombre.</p>
+<pre><code class="language-python">'Un {} vale {} {}'.format('€', 1.12, '$')        # 'Un € vale 1.12 $'
+'Un {2} vale {1} {0}'.format('€', 1.12, '$')     # 'Un $ vale 1.12 €'
+'Un {moneda1} vale {cambio} {moneda2}'.format(
+    moneda1='€', cambio=1.12, moneda2='$')       # 'Un € vale 1.12 $'
+</code></pre>
+<hr />
+<h2 id="modulo-5-cadenas-en-profundidad-str">🟡 MÓDULO 5 — Cadenas en profundidad (<code>str</code>)</h2>
+<h3 id="51-acceso-a-elementos-por-indice">5.1 Acceso a elementos por índice</h3>
+<p><strong>Descripción:</strong> Cada carácter tiene un índice. El primer carácter es el índice <code>0</code>. Se pueden usar índices negativos para recorrer del final al principio (el último es <code>-1</code>).</p>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">c[i]
+</code></pre>
+<p><strong>Índices de <code>'Python'</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Carácter</th>
+<th>P</th>
+<th>y</th>
+<th>t</th>
+<th>h</th>
+<th>o</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Índice positivo</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Índice negativo</td>
+<td>-6</td>
+<td>-5</td>
+<td>-4</td>
+<td>-3</td>
+<td>-2</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-python">'Python'[0]    # 'P'
+'Python'[1]    # 'y'
+'Python'[-1]   # 'n'
+'Python'[6]    # ❌ IndexError: string index out of range
+</code></pre>
+<h3 id="52-subcadenas-slicing">5.2 Subcadenas (slicing)</h3>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">c[i:j:k]
+</code></pre>
+<p>Devuelve la subcadena desde el índice <code>i</code> hasta el carácter <strong>anterior</strong> al índice <code>j</code>, tomando caracteres cada <code>k</code>.</p>
+<pre><code class="language-python">'Python'[1:4]   # 'yth'
+'Python'[1:1]   # ''  (vacía)
+'Python'[2:]    # 'thon'
+</code></pre>
+<h3 id="53-operaciones-con-cadenas">5.3 Operaciones con cadenas</h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c1 + c2</code></td>
+<td>Concatenación</td>
+<td><code>'Me gusta ' + 'Python'</code> → <code>'Me gusta Python'</code></td>
+</tr>
+<tr>
+<td><code>c * n</code></td>
+<td>Repetición n veces</td>
+<td><code>'Python' * 3</code> → <code>'PythonPythonPython'</code></td>
+</tr>
+<tr>
+<td><code>c1 in c2</code></td>
+<td>¿Está contenida?</td>
+<td><code>'y' in 'Python'</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>c1 not in c2</code></td>
+<td>¿No está contenida?</td>
+<td><code>'to' not in 'Python'</code> → <code>True</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-comparacion-de-cadenas">5.4 Comparación de cadenas</h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c1 == c2</code></td>
+<td>Igualdad</td>
+</tr>
+<tr>
+<td><code>c1 &gt; c2</code></td>
+<td><code>c1</code> sucede a <code>c2</code></td>
+</tr>
+<tr>
+<td><code>c1 &lt; c2</code></td>
+<td><code>c1</code> antecede a <code>c2</code></td>
+</tr>
+<tr>
+<td><code>c1 &gt;= c2</code></td>
+<td>Sucede o es igual</td>
+</tr>
+<tr>
+<td><code>c1 &lt;= c2</code></td>
+<td>Antecede o es igual</td>
+</tr>
+<tr>
+<td><code>c1 != c2</code></td>
+<td>Distintas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-funciones-de-cadenas">5.5 Funciones de cadenas</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>len(c)</code></td>
+<td>Número de caracteres</td>
+</tr>
+<tr>
+<td><code>min(c)</code></td>
+<td>Carácter menor</td>
+</tr>
+<tr>
+<td><code>max(c)</code></td>
+<td>Carácter mayor</td>
+</tr>
+<tr>
+<td><code>c.upper()</code></td>
+<td>Devuelve la cadena en mayúsculas</td>
+</tr>
+<tr>
+<td><code>c.lower()</code></td>
+<td>Devuelve la cadena en minúsculas</td>
+</tr>
+<tr>
+<td><code>c.title()</code></td>
+<td>Primer carácter en mayúsculas, resto en minúsculas</td>
+</tr>
+<tr>
+<td><code>c.split(delimitador)</code></td>
+<td>Lista de subcadenas separadas por el delimitador (por defecto, espacio)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">len('Python')            # 6
+min('Python')            # 'P'
+max('Python')            # 'y'
+'Python'.upper()         # 'PYTHON'
+'A,B,C'.split(',')       # ['A', 'B', 'C']
+'I love Python'.split()  # ['I', 'love', 'Python']
+</code></pre>
+<hr />
+<h2 id="modulo-6-condicionales-y-bucles">🟡 MÓDULO 6 — Condicionales y bucles</h2>
+<h3 id="61-condicional-if-elif-else">6.1 Condicional <code>if</code> / <code>elif</code> / <code>else</code></h3>
+<p><strong>Descripción:</strong> Evalúa una condición lógica y ejecuta el bloque correspondiente. Si <code>condicion1</code> es <code>True</code>, ejecuta su bloque; si no, evalúa las siguientes hasta llegar a la primera <code>True</code>. Si ninguna lo es, ejecuta <code>else</code>.</p>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">if condicion1:
+    bloque_codigo
+elif condicion2:
+    bloque_codigo
+...
+else:
+    bloque_codigo
+</code></pre>
+<ul>
+<li>Pueden aparecer varios <code>elif</code>, pero <strong>solo un <code>else</code></strong> al final.</li>
+<li>⚠️ <strong>Los bloques deben estar indentados con 4 espacios.</strong></li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-python">edad = 14
+if edad &lt;= 18:
+    print('Menor')
+elif edad &gt; 65:
+    print('Jubilado')
+else:
+    print('Activo')
+# Menor
+
+edad = 20
+if edad &lt;= 18:
+    print('Menor')
+elif edad &gt; 65:
+    print('Jubilado')
+else:
+    print('Activo')
+# Activo
+</code></pre>
+<h3 id="62-bucle-while">6.2 Bucle <code>while</code></h3>
+<p><strong>Descripción:</strong> Repite la ejecución del bloque mientras la condición sea cierta.</p>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">while condicion:
+    bloque_codigo
+</code></pre>
+<p>Se puede interrumpir con <code>break</code>. ⚠️ Bloque indentado con 4 espacios.</p>
+<p><strong>Ejemplo 1 (condición en el while):</strong></p>
+<pre><code class="language-python">num = None
+while num != 0:
+    num = int(input('Introduce un número: '))
+</code></pre>
+<p><strong>Ejemplo 2 (alternativa con <code>break</code>):</strong></p>
+<pre><code class="language-python">while True:
+    num = int(input('Introduce un número: '))
+    if num == 0:
+        break
+</code></pre>
+<h3 id="63-bucle-for">6.3 Bucle <code>for</code></h3>
+<p><strong>Descripción:</strong> Repite el bloque para cada elemento de una secuencia, asignando dicho elemento a la variable en cada repetición. Se usa para recorrer cadenas, listas, tuplas o diccionarios.</p>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">for i in secuencia:
+    bloque_codigo
+</code></pre>
+<ul>
+<li><code>break</code>: interrumpe el bucle.</li>
+<li><code>continue</code>: salta a la siguiente iteración.</li>
+<li>⚠️ Bloque indentado con 4 espacios.</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-python">palabra = 'Python'
+for letra in palabra:
+    print(letra)
+# P y t h o n (uno por línea)
+</code></pre>
+<p><strong>La función <code>range</code>:</strong></p>
+<ul>
+<li><code>range(fin)</code>: enteros desde <code>0</code> hasta <code>fin-1</code>.</li>
+<li><code>range(inicio, fin, salto)</code>: enteros desde <code>inicio</code> hasta <code>fin-1</code> con incremento <code>salto</code>.</li>
+</ul>
+<pre><code class="language-python">for i in range(1, 10, 2):
+    print(i, end=&quot;, &quot;)
+# 1, 3, 5, 7, 9,
+</code></pre>
+<hr />
+<h2 id="modulo-7-listas-tuplas-y-diccionarios">🟠 MÓDULO 7 — Listas, tuplas y diccionarios</h2>
+<h3 id="71-listas-list">7.1 Listas (<code>list</code>)</h3>
+<p><strong>Descripción:</strong> Secuencias <strong>ordenadas</strong> de objetos de distintos tipos. Son <strong>mutables</strong> (pueden alterarse durante la ejecución).</p>
+<p><strong>Creación con corchetes:</strong></p>
+<pre><code class="language-python">[]                          # lista vacía
+[1, &quot;dos&quot;, True]            # elementos de distintos tipos
+[1, [2, 3], 4]              # listas anidadas
+</code></pre>
+<p><strong>Creación con <code>list()</code>:</strong></p>
+<pre><code class="language-python">list(c)   # crea una lista con los elementos de la secuencia/colección c
+</code></pre>
+<p><strong>Acceso a elementos</strong> (igual que en cadenas):</p>
+<pre><code class="language-python">a = ['P', 'y', 't', 'h', 'o', 'n']
+a[0]     # 'P'
+a[5]     # 'n'
+a[6]     # ❌ IndexError: list index out of range
+a[-1]    # 'n'
+</code></pre>
+<p><strong>Sublistas</strong> (slicing):</p>
+<pre><code class="language-python">a[1:4]   # ['y', 't', 'h']
+a[1:1]   # []
+</code></pre>
+<p><strong>Operaciones que NO modifican la lista:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>len(l)</code></td>
+<td>Número de elementos</td>
+</tr>
+<tr>
+<td><code>min(l)</code></td>
+<td>Mínimo (si son comparables)</td>
+</tr>
+<tr>
+<td><code>max(l)</code></td>
+<td>Máximo (si son comparables)</td>
+</tr>
+<tr>
+<td><code>sum(l)</code></td>
+<td>Suma de elementos (si se pueden sumar)</td>
+</tr>
+<tr>
+<td><code>dato in l</code></td>
+<td>¿Pertenece?</td>
+</tr>
+<tr>
+<td><code>l.index(dato)</code></td>
+<td>Posición del primer elemento con ese valor</td>
+</tr>
+<tr>
+<td><code>l.count(dato)</code></td>
+<td>Nº de veces que aparece el valor</td>
+</tr>
+<tr>
+<td><code>all(l)</code></td>
+<td><code>True</code> si todos los elementos son <code>True</code></td>
+</tr>
+<tr>
+<td><code>any(l)</code></td>
+<td><code>True</code> si algún elemento es <code>True</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">a = [1, 2, 2, 3]
+len(a)        # 4
+min(a)        # 1
+max(a)        # 3
+sum(a)        # 8
+3 in a        # True
+a.index(2)    # 1
+a.count(2)    # 2
+</code></pre>
+<p><strong>Operaciones que SÍ modifican la lista:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>l1 + l2</code></td>
+<td>Nueva lista concatenando ambas</td>
+</tr>
+<tr>
+<td><code>l.append(dato)</code></td>
+<td>Añade <code>dato</code> al final</td>
+</tr>
+<tr>
+<td><code>l.extend(secuencia)</code></td>
+<td>Añade los datos de <code>secuencia</code> al final</td>
+</tr>
+<tr>
+<td><code>l.insert(indice, dato)</code></td>
+<td>Inserta <code>dato</code> en <code>indice</code>, desplazando el resto</td>
+</tr>
+<tr>
+<td><code>l.remove(dato)</code></td>
+<td>Elimina el primer elemento con ese valor</td>
+</tr>
+<tr>
+<td><code>l.pop([indice])</code></td>
+<td>Devuelve y elimina el elemento en <code>indice</code></td>
+</tr>
+<tr>
+<td><code>l.sort()</code></td>
+<td>Ordena (si son comparables)</td>
+</tr>
+<tr>
+<td><code>l.reverse()</code></td>
+<td>Invierte el orden</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">a = [1, 3]
+b = [2, 4, 6]
+a.append(5)      # a = [1, 3, 5]
+a.remove(3)      # a = [1, 5]
+a.insert(1, 3)   # a = [1, 3, 5]
+b.pop()          # devuelve 6
+c = a + b        # c = [1, 3, 5, 2, 4]
+c.sort()         # c = [1, 2, 3, 4, 5]
+c.reverse()      # c = [5, 4, 3, 2, 1]
+</code></pre>
+<p><strong>Copia de listas — ¡concepto clave!</strong></p>
+<ul>
+<li><strong>Copia por referencia</strong> <code>l1 = l2</code>: ambas variables apuntan a la <strong>misma</strong> lista. Cualquier cambio afecta a ambas.</li>
+<li><strong>Copia por valor</strong> <code>l1 = list(l2)</code>: crea una <strong>nueva</strong> lista en otra dirección de memoria. Los cambios no se afectan mutuamente.</li>
+</ul>
+<pre><code class="language-python"># Por referencia
+a = [1, 2, 3]
+b = a
+b.remove(2)
+a          # [1, 3]  ¡a también cambió!
+
+# Por valor
+a = [1, 2, 3]
+b = list(a)
+b.remove(2)
+a          # [1, 2, 3]  a no cambió
+</code></pre>
+<h3 id="72-tuplas-tuple">7.2 Tuplas (<code>tuple</code>)</h3>
+<p><strong>Descripción:</strong> Secuencias <strong>ordenadas</strong> de objetos de distintos tipos. Son <strong>inmutables</strong> (no cambian durante la ejecución). Se usan para colecciones con estructura semántica (vectores, matrices).</p>
+<p><strong>Creación con paréntesis:</strong></p>
+<pre><code class="language-python">()                          # tupla vacía
+(1, &quot;dos&quot;, True)
+(1, 2, 3)                   # vector
+((1, 2, 3), (4, 5, 6))      # matriz
+</code></pre>
+<p><strong>Creación con <code>tuple()</code>:</strong></p>
+<pre><code class="language-python">tuple()            # ()
+tuple(1, 2, 3)     # (1, 2, 3)  ⚠️ (ver nota)
+tuple(&quot;Python&quot;)    # ('P', 'y', 't', 'h', 'o', 'n')
+tuple([1, 2, 3])   # (1, 2, 3)
+</code></pre>
+<p><strong>Operaciones:</strong> El acceso y el slicing funcionan igual que en listas. Las operaciones de listas que <strong>no modifican</strong> también aplican a tuplas.</p>
+<pre><code class="language-python">a = (1, 2, 3)
+a[1]         # 2
+len(a)       # 3
+a.index(3)   # 2
+0 in a       # False
+
+b = ((1, 2, 3), (4, 5, 6))
+b[1]         # (4, 5, 6)
+b[1][2]      # 6
+</code></pre>
+<h3 id="73-diccionarios-dict">7.3 Diccionarios (<code>dict</code>)</h3>
+<p><strong>Descripción:</strong> Colección de pares <strong>clave → valor</strong>. Características:</p>
+<ul>
+<li><strong>No tienen orden.</strong></li>
+<li>Pueden contener elementos de distintos tipos.</li>
+<li>Son <strong>mutables</strong>.</li>
+<li>Las claves son <strong>únicas</strong> (no se repiten) y deben ser de tipo <strong>inmutable</strong>.</li>
+</ul>
+<p><strong>Creación con llaves:</strong></p>
+<pre><code class="language-python">{}   # diccionario vacío
+{'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}
+{'nombre_completo': {'nombre': 'Alfredo', 'Apellidos': 'Sánchez Alberca'}}  # anidados
+</code></pre>
+<p><strong>Acceso a elementos:</strong></p>
+<ul>
+<li><code>d[clave]</code>: devuelve el valor asociado. Si la clave no existe, <strong>error</strong>.</li>
+<li><code>d.get(clave, valor)</code>: devuelve el valor asociado; si no existe, devuelve <code>valor</code> (o <code>None</code> si no se especifica).</li>
+</ul>
+<pre><code class="language-python">a = {'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}
+a['nombre']                    # 'Alfredo'
+a.get('email')                 # 'asalber@ceu.es'
+a.get('universidad', 'CEU')    # 'CEU'
+</code></pre>
+<p><strong>Operaciones que NO modifican el diccionario:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>len(d)</code></td>
+<td>Nº de elementos</td>
+</tr>
+<tr>
+<td><code>min(d)</code> / <code>max(d)</code></td>
+<td>Mínima/máxima clave (si son comparables)</td>
+</tr>
+<tr>
+<td><code>sum(d)</code></td>
+<td>Suma de las claves (si se pueden sumar)</td>
+</tr>
+<tr>
+<td><code>clave in d</code></td>
+<td>¿Pertenece la clave?</td>
+</tr>
+<tr>
+<td><code>d.keys()</code></td>
+<td>Iterador sobre claves</td>
+</tr>
+<tr>
+<td><code>d.values()</code></td>
+<td>Iterador sobre valores</td>
+</tr>
+<tr>
+<td><code>d.items()</code></td>
+<td>Iterador sobre pares clave-valor</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">a = {'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}
+len(a)          # 3
+min(a)          # 'despacho'
+'email' in a    # True
+a.keys()        # dict_keys(['nombre', 'despacho', 'email'])
+a.values()      # dict_values(['Alfredo', 218, 'asalber@ceu.es'])
+a.items()       # dict_items([('nombre', 'Alfredo'), ('despacho', 218), ('email', 'asalber@ceu.es')])
+</code></pre>
+<p><strong>Operaciones que SÍ modifican el diccionario:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d[clave] = valor</code></td>
+<td>Añade/actualiza el par</td>
+</tr>
+<tr>
+<td><code>d.update(d2)</code></td>
+<td>Añade los pares de <code>d2</code></td>
+</tr>
+<tr>
+<td><code>d.pop(clave, alternativo)</code></td>
+<td>Devuelve y elimina el valor; si no existe, devuelve <code>alternativo</code></td>
+</tr>
+<tr>
+<td><code>d.popitem()</code></td>
+<td>Devuelve y elimina el último par añadido (como tupla)</td>
+</tr>
+<tr>
+<td><code>del d[clave]</code></td>
+<td>Elimina el par con esa clave</td>
+</tr>
+<tr>
+<td><code>d.clear()</code></td>
+<td>Vacía el diccionario</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">a = {'nombre': 'Alfredo', 'despacho': 218, 'email': 'asalber@ceu.es'}
+a['universidad'] = 'CEU'
+a.pop('despacho')      # 218
+a.popitem()            # ('universidad', 'CEU')
+del a['email']
+a.clear()              # {}
+</code></pre>
+<p><strong>Copia de diccionarios</strong> (mismo concepto que listas):</p>
+<ul>
+<li>Por referencia: <code>d1 = d2</code></li>
+<li>Por valor: <code>d1 = dict(d2)</code></li>
+</ul>
+<hr />
+<h2 id="modulo-8-comprension-de-colecciones">🔴 MÓDULO 8 — Comprensión de colecciones</h2>
+<p><strong>Descripción:</strong> Mecanismo de Python para generar colecciones nuevas a partir de colecciones existentes aplicando una expresión y/o condición, de forma más compacta que con un bucle.</p>
+<h3 id="81-comprension-de-listas">8.1 Comprensión de listas</h3>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">[expresion for variable in lista if condicion]
+</code></pre>
+<p>Genera la lista con el resultado de evaluar <code>expresion</code> para cada <code>variable</code> que toma los valores de <code>lista</code> que cumplen <code>condicion</code>.</p>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-python">[x ** 2 for x in range(10)]
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+[x for x in range(10) if x % 2 == 0]
+# [0, 2, 4, 6, 8]
+
+[x ** 2 for x in range(10) if x % 2 == 0]
+# [0, 4, 16, 36, 64]
+
+notas = {'Carmen': 5, 'Antonio': 4, 'Juan': 8, 'Mónica': 9, 'María': 6, 'Pablo': 3}
+[nombre for (nombre, nota) in notas.items() if nota &gt;= 5]
+# ['Carmen', 'Juan', 'Mónica', 'María']
+</code></pre>
+<h3 id="82-comprension-de-diccionarios">8.2 Comprensión de diccionarios</h3>
+<p><strong>Sintaxis:</strong></p>
+<pre><code class="language-python">{expresion_clave: expresion_valor for variables in lista if condicion}
+</code></pre>
+<p>Genera un diccionario cuyas claves son <code>expresion_clave</code> y cuyos valores son <code>expresion_valor</code>, para cada <code>variable</code> de <code>lista</code> que cumpla <code>condicion</code>.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-python">notas = {'Carmen': 5, 'Antonio': 4, 'Juan': 8, 'Mónica': 9, 'María': 6, 'Pablo': 3}
+{nombre: nota + 1 for (nombre, nota) in notas.items() if nota &gt;= 5}
+# {'Carmen': 6, 'Juan': 9, 'Mónica': 10, 'María': 7}
+</code></pre>
+<hr />
+<h2 id="resumen-del-orden-de-aprendizaje">📚 Resumen del orden de aprendizaje</h2>
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Tema</th>
+<th>Dificultad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tipos primitivos simples (números, cadenas, booleanos)</td>
+<td>🟢 Básico</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Operadores y conversión de datos</td>
+<td>🟢 Básico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Variables</td>
+<td>🟢 Básico</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Entrada/salida por terminal (<code>input</code>, <code>print</code>, f-strings)</td>
+<td>🟡 Intermedio</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cadenas en profundidad (índices, slicing, funciones)</td>
+<td>🟡 Intermedio</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Condicionales y bucles (<code>if</code>, <code>while</code>, <code>for</code>, <code>range</code>)</td>
+<td>🟡 Intermedio</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Listas, tuplas y diccionarios</td>
+<td>🟠 Intermedio-alto</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Comprensión de colecciones</td>
+<td>🔴 Avanzado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consejos-clave-para-recordar">💡 Consejos clave para recordar</h3>
+<ol>
+<li><strong>Indentación de 4 espacios</strong> en todos los bloques (<code>if</code>, <code>while</code>, <code>for</code>).</li>
+<li><strong><code>input()</code> siempre devuelve <code>str</code></strong> — convierte con <code>int()</code> o <code>float()</code> si necesitas números.</li>
+<li><strong>Índices empiezan en 0</strong> y el último es <code>-1</code>.</li>
+<li><strong>Copia por referencia vs. por valor</strong> es una de las trampas más comunes con listas y diccionarios: usa <code>list()</code> o <code>dict()</code> para copiar de verdad.</li>
+<li><strong><code>bool('0')</code> es <code>True</code></strong> — solo la cadena vacía <code>''</code> es <code>False</code>.</li>
+<li><strong>Las tuplas son inmutables</strong>, las listas y diccionarios son mutables.</li>
+<li><strong>f-strings requieren Python 3.6+</strong>.</li>
+<li><strong>Las claves de un diccionario son únicas y deben ser inmutables.</strong></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
