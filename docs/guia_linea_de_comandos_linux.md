@@ -333,8 +333,7 @@ Los números de permisos que nos podemos encontrar serán los siguientes:
 * 4 = r– (Solo permisos de lectura)
 * 5 = r-x (Permisos de lectura y ejecución)
 * 6 = rw- (Permisos de lectura y escritura)
-* 7 = rwx (Todos los permisos)
-
+* 7 = rwx (Todos los permisos)<br>
 
 * **Ejemplo 1: `chmod 755 script.sh`**
     * Usuario (Propietario): $4 + 2 + 1 = 7$ (`rwx` - Control total)
@@ -409,13 +408,13 @@ sudo chown -R www-data:www-data /var/www/sitio_web/
 
 Todo proceso en Linux abierto en la terminal funciona con tres flujos o descriptores de archivos predeterminados (*File Descriptors* - FD):
 
-```
+
                       ┌──────────────────────┐
     [0] stdin  ─────> │                      | ─────> [1] stdout (Pantalla)
   (Teclado/Input)     │   Proceso / Comando  │
                       │                      | ─────> [2] stderr (Pantalla)
                       └──────────────────────┘
-```
+
 
 1. **`0` - Stdin (Standard Input):** Entrada estándar por la que el comando recibe datos (por defecto, el teclado).
 2. **`1` - Stdout (Standard Output):** Salida estándar donde el comando envía los resultados exitosos (por defecto, la pantalla del emulador de terminal).
