@@ -1,9 +1,7 @@
-# Mis Apuntes de Informática
-
-¡Bienvenido a mi biblioteca digital de teoría y aprendizaje!
-
-## Contenido
-
-* **Python**
-
-> Esta web se genera automáticamente desde mi repositorio de GitHub.
+* **Informática**
+  * Mis Apuntes de Informática
+  * **Máquinas Virtuales**
+    * Guía práctica de conexión SSH a una máquina virtual
+  * **Linux**
+    * Guía Completa: Fundamentos de la Línea de Comandos en Linux
+  * Guía Completa de Python — De Cero a Intermedio
