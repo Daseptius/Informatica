@@ -333,7 +333,7 @@ Los números de permisos que nos podemos encontrar serán los siguientes:
 * 4 = r– (Solo permisos de lectura)
 * 5 = r-x (Permisos de lectura y ejecución)
 * 6 = rw- (Permisos de lectura y escritura)
-* 7 = rwx (Todos los permisos)  
+* 7 = rwx (Todos los permisos)
 
 * **Ejemplo 1: `chmod 755 script.sh`**
     * Usuario (Propietario): $4 + 2 + 1 = 7$ (`rwx` - Control total)
@@ -410,9 +410,9 @@ Todo proceso en Linux abierto en la terminal funciona con tres flujos o descript
 
 ```
                       ┌──────────────────────┐
-    [0] stdin  ─────> │                      | ─────> [1] stdout (Pantalla)
-  (Teclado/Input)     │   Proceso / Comando  │
-                      │                      | ─────> [2] stderr (Pantalla)
+    [0] stdin  ─────>  │                    | ─────> [1] stdout (Pantalla)
+  (Teclado/Input)     │   Proceso / Comando │
+                      │                     | ─────> [2] stderr (Pantalla)
                       └──────────────────────┘
 ```
 
