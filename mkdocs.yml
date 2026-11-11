@@ -25,7 +25,7 @@ theme:
     - content.code.copy
 
 nav:
-  - Home: index.md
+  - Presentación: index.md
   - Máquinas Virtuales:
       - Guía de conexión SSH: guia-ssh.md
   - Linux:
