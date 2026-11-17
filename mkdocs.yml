@@ -3,6 +3,7 @@ theme:
   name: material
   language: es
   palette:
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: green
@@ -10,6 +11,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Cambiar a modo oscuro
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep orange
