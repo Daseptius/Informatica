@@ -21,7 +21,6 @@ theme:
         name: Cambiar a modo claro
   features:
     - navigation.sections
-    - navigation.expand
     - content.code.copy
 
 nav:
