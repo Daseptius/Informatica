@@ -19,10 +19,8 @@ theme:
         name: Cambiar a modo claro
   features:
     - navigation.sections
+    - navigation.indexes
     - content.code.copy
-
-extra_css:
-  - stylesheets/extra.css
 
 nav:
   - Presentación: index.md
