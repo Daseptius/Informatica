@@ -18,8 +18,7 @@ theme:
         icon: material/brightness-4
         name: Cambiar a modo claro
   features:
-    - navigation.sections
-    - navigation.indexes
+    - navigation.instant
     - content.code.copy
 
 nav:
